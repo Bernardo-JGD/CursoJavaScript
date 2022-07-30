@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos individuales</title>
+</head>
+<body>
+    
+    <h1>Formulario</h1>
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Bernardo"/>
+        <br/>
+        Apellido: <input type="text" name="apellido" value="Guzman"/>
+        <br/>
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="valores"></div>
+    <div id="objetos"></div>
+
+    <script>
+        let varFormulario = document.forms['formulario'];
+        let texto = '';
+        let nombre = varFormulario['nombre'];//así podemos acceder de manera individual a los elementos del formulario
+        let apellido = varFormulario['apellido'];//solo indicamos el nombre "name" del elemento que queremos seleccionar
+        texto = nombre.value + '<br/>' + apellido.value;
+        console.log(nombre);//si solo indicamos la variable sin la propiedad value, se muestra la definicion del
+        //elemento html, no el valor que muestra en pantalla
+        document.getElementById('valores').innerHTML = texto;//asignamos los valores extraidos y concatenados en la
+        //variable texto dentro del div con el id "valores"
+        texto = nombre + '<br/>' + apellido;//si no indicamos value, solo nos muestra que es un objeto, no nos muestra su contenido
+        document.getElementById('objetos').innerHTML = texto;
+    </script>
+
+</body>
+</html>

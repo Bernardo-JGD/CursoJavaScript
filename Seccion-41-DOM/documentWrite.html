@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Write</title>
+</head>
+<body>
+
+    <h1>Document.write</h1>
+    <p>Probando el método document.write('')</p>
+    <button onclick="mostrar()">Mostrar</button>
+    <br/>
+    <script>
+        document.write("Mensaje con document.write()");
+        function mostrar(){
+            document.write("Se borra todo lo anterior de la página al usar este método de nuevo");
+            //no es lo mismo que ir a una página nuevoa o refrescar la página,
+            //simplemente se remplaza todo el contenido
+        }
+    </script>
+    
+    
+</body>
+</html>

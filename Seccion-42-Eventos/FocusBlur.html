@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnFocus y OnBlur</title>
+</head>
+<body>
+
+    <h1>Eventos onfocus y onblur</h1>
+
+    <div>
+        Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+        <br/><br/>
+        Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    </div>
+
+    <script>
+        function cambiar(elementoInput){
+            elementoInput.style.background = "yellow";
+        }
+        function regresar(elementoInput){
+            elementoInput.style.background = "white";
+        }
+        //onfocus: se activa cuando se está dentro del campo de texto
+        //onblur: se activa cuando se sale del campo de texto con click afuera o con tabulador
+    </script>
+    
+</body>
+</html>

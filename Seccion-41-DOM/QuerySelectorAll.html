@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+
+    <style>
+        .azul{
+            color: blue;
+        }
+        .rojo{
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1 class="azul">QuerySelectorAll-Clase azul</h1>
+    <p class="azul">Párrafo azul 1</p>
+    <p class="azul">Párrafo azul 2</p>
+    <p class="rojo">Párrafo rojo 1</p>
+
+    <script>//Podemos seleccionar elementos en específico que contengan una clase en específico,
+            //delimintando elementos iguales con clases iguales
+
+        let elementos = document.querySelectorAll('p.azul');//elemento.nombreClase
+        //de esta manera, aunque un elemento contenga la misma clase, no se seleccionará si este no es del tipo 
+        //de elemento especificado, igual si un elemento no contiene la clase especificada, este no se seleccionará
+        console.log(`No. Elementos: ${elementos.length}`);
+
+        for(let elemento of elementos){
+            console.log(`${elemento.innerHTML}`);
+        }
+
+    </script>
+
+</body>
+</html>

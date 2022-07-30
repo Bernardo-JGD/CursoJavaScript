@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flecha y addEventListener</title>
+</head>
+<body>
+    
+    <h1>Flecha y addEvenetListener</h1>
+    <div>
+        Nombre: <input type="text" id="nombre" />
+        <br/><br/>
+        Apellido: <input type="text" id="apellido" />
+    </div>
+
+    <script>
+        //al usar las funciones flecha directamente como parámetro puede ser una desventaja, ya que no 
+        //podremos reutilizarla
+        document.getElementById('nombre').addEventListener('focus', (evento) => {
+            evento.target.style.background = "pink";
+        });
+        document.getElementById('nombre').addEventListener('blur', (evento) => {
+            evento.target.style.background = '';//si ponemos cadena vacia, white es el color por defecto
+        });
+
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur', regresar);
+
+        function cambiar(evento){
+            evento.target.style.background = 'yellow';
+        }
+
+        function regresar(evento){
+            evento.target.style.background = 'white';
+        }
+
+    </script>
+
+</body>
+</html>

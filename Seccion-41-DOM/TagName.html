@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByTagName</title>
+</head>
+<body>
+    <h1>getElementByTagName</h1>
+    <!--
+        Podemos buscar elementos html con javascript por medio de su tipo, 
+        por ejemplo, podemos buscar solo los elmentos de tipo párrafo. 
+        En este caso no es necesario que tengan un id ya que no buscamos por id, 
+        sino todos los elementos de un mismo tipo
+    -->
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+    <p>Párrafo 4</p>
+    <p>Párrafo 5</p>
+
+    <script>
+        let parrafos = document.getElementsByTagName('p');//esto puede retornar un arreglo de objetos
+        //para saber si es un arreglo podemos usar el .length
+        console.log(`No. de párrafos: ${parrafos.length}`);
+        for(let i = 0; i<parrafos.length; i++){//podemos iterar el arreglo y observar el contenido de cada elemento
+            console.log(`${i} - ${parrafos[i].innerHTML}`);
+        }
+    </script>
+
+</body>
+</html>

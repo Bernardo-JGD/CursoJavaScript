@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de atributos HTML</title>
+</head>
+<body>
+    
+    <h1>Cambiando una imagen</h1>
+    <img id="imagen" src="html5.png"/>
+    <br/>
+    <button onclick="cambiar()">Cambiar Imagen</button>
+
+    <script>
+        let ncambio = 0;
+        function cambiar(){
+            if(ncambio == 0){
+                document.getElementById('imagen').src = "javascript.png";
+                ncambio++;
+            }else{
+                if(ncambio == 1){
+                    document.getElementById('imagen').src = "html5.png";
+                    ncambio--;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

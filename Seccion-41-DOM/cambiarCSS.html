@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar CSS</title>
+</head>
+<body>
+    
+    <h1 id="titulo">Título original</h1>
+    <button onclick="cambiarColor()">Cambiar color del título</button>
+
+    <script>
+        let contadorColor = 0;
+        
+        function cambiarColor(){
+            let titulo = document.getElementById('titulo').style;
+            let contenidoTitulo = document.getElementById('titulo');
+            switch(contadorColor){
+
+                case 0: 
+                    titulo.color = "red";
+                    contenidoTitulo.innerHTML = "Título rojo";
+                    contadorColor++;
+                break; 
+
+                case 1:  
+                    titulo.color = "blue";
+                    contenidoTitulo.innerHTML = "Título azul";
+                    contadorColor++;
+                break;
+
+                case 2: 
+                    titulo.color = "green";
+                    contenidoTitulo.innerHTML = "Título verde";
+                    contadorColor++;
+                break;
+
+                case 3:
+                    titulo.color = "orange";
+                    contenidoTitulo.innerHTML = "Título naranja";
+                    contadorColor++;
+                break;
+
+                default:
+                    titulo.color = "black";
+                    contenidoTitulo.innerHTML = "Título original";
+                    contadorColor = 0;
+                break;
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegación de eventos</title>
+</head>
+<body>
+    
+    <h1>Delegación de eventos</h1>
+
+    <form id="forma">
+        Nombre: <input type="text" id="nombre"/>
+        <br/><br/>
+        Apellido: <input type="text" id="apellido"/>
+    </form>
+
+    <script>
+        //Podemos hacer que los eventos se apliquen a todos los input usando un formulario
+        //el cual con su id lo agregamos a una variable constante
+        const forma = document.getElementById('forma');
+        //Es muy conveniente utilizar funciones flecha cuando ya no tenemos que reutilizar código
+        //Este tipo de eventos solo repercute para los elementos de tipo input
+        forma.addEventListener('focus', (evento) => {
+            evento.target.style.background = 'pink';
+        }, true);//para que se pueda aplicar a todos los elementos internos de tipo input del formulario,
+        //es necesario agregar un tercer parámetro como true, en pocas palabras si no se agrega no jala
+
+        forma.addEventListener('blur', (evento) => {
+            evento.target.style.background = '';
+        }, true);
+
+    </script>
+
+</body>
+</html>

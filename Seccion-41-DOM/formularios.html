@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con javascript</title>
+</head>
+<body>
+
+    <h1>Formulario con JavaScript</h1>
+    <form id = "formulario">
+        Nombre: <input type="text" name="nombre" value="Bernardo"/>
+        <br/>
+        Apellido: <input type="text" name="apellido" value="Guzman"/>
+        <br/>
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="valores"></div>
+    <script>
+        function mostrarValores(){
+            let varFormulario = document.forms['formulario'];//para acceder al formulario necesitamos su id
+            let texto = '';//inicializamos una cadena para concatenar el texto que extraigamos del formulario
+            for(let elemento of varFormulario){
+                texto += elemento.value + '<br/>';
+                //.value para acceder al contenido del input
+                //damos un salto con html, en consola saldra el texto "<br/>" tal cual
+            }
+            document.getElementById('valores').innerHTML = texto;
+            //Para mostrar el texto extraido en este caso usamos un div (puede ser cualquier otro elemento)
+            //obtenemos su id y le asignamos lo que contenian los input por medio de la variable texto, que concateno sus valores
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de clicks</title>
+</head>
+<body>
+    
+    <h1 id="titulo" onmousedown="abajo(this)" onmouseup="arriba(this)" onclick="arribaAbajo(this)">
+        Eventos de clicks
+    </h1>
+
+    <script>
+        function abajo(titulo){
+            titulo.style.color = "red";
+            titulo.innerHTML = "onmousedown";
+            console.log(titulo.innerHTML);
+        }
+        function arriba(titulo){
+            titulo.style.color = "blue";
+            titulo.innerHTML = "onmouseup";
+            console.log(titulo.innerHTML);
+        }
+        function arribaAbajo(titulo){
+            titulo.style.color = "green";
+            titulo.innerHTML = "onclick";
+            console.log(titulo.innerHTML);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <!--
+        el argumento "this" apunta al mismo elemento h1, así no se utiliza id.
+        se pueden enviar varias funciones, pero lo recomendable es usar solo 1
+    -->
+    <h1 onclick="cambiarTitulo(this)">Título original</h1>
+    <script>
+        function cambiarTitulo(titulo){
+            console.log(titulo);
+            console.log(titulo.innerHTML);//Muestra el valor final  inlcuso antes del cambio
+            titulo.innerHTML = "Nuevo Título";
+            console.log(titulo);
+            console.log(titulo.innerHTML);//Muestra el valor final 
+        }
+    </script>
+
+
+</body>
+</html>

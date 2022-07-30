@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+    <style>
+        .azul{
+            color: blue;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Clases</h1>
+    <h4 class="azul">Titulo azul</h4>
+    <p>Rojo 1</p>
+    <p class="azul">Azul 1</p>
+    <p>Rojo 2</p>
+    <p class="azul">Azul 2</p>
+    
+    <script>//podemos seleccionar elementos html por su clase CSS
+        //en este caso no importa el elemento que sea, va a seleccionar todos los elementos
+        //que contengan la misma clase CSS aunque estos sean diferentes
+        let elementos = document.getElementsByClassName('azul');
+        console.log(`No. elementos: ${elementos.length}`);
+        
+        //el siguiente es un for of, similar a mi parecer a un for each
+        for(let elemento of elementos){
+            console.log(`${elemento.innerHTML}`);
+        }
+    </script>
+    
+</body>
+</html>

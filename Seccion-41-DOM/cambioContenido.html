@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiando contenido</title>
+</head>
+<body>
+    <h1>Cambiando contenido</h1>
+    <h1 id="titulo">Titulo original</h1>
+    <p id="texto">Podemos agregar contenido o modificarlo con JavaScript</p>
+    <button onclick="cambiar()">Cambiar titulo</button>
+    <button onclick="agregar()">Agregar texto</button>
+    <script>
+        let contaTitulo = 0;
+        let numeroTexto = 0;
+        function cambiar(){
+            if(contaTitulo == 0){
+                document.getElementById('titulo').innerHTML = "Nuevo título";
+                contaTitulo++;
+            }else{
+                if(contaTitulo == 1){
+                    document.getElementById('titulo').innerHTML = "Título original";
+                    contaTitulo--;
+                }
+                
+            }
+             
+        }
+        function agregar(){
+            numeroTexto++;
+            document.getElementById('texto').innerHTML += '<br/> Texto nuevo ' + numeroTexto;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociar Eventos</title>
+</head>
+<body>
+    
+    <h1 id="titulo">Manejo de DOM con JavaScript</h1>
+    <div id="mostrar"></div>
+
+    <script>
+        //aquí se provoca el evento que llama la funcion
+        document.getElementById('titulo').onclick = nuevoContenido;//asignamos una funcion, solo la referencia,
+        //por eso no usamos parentesis // es una funcion tipo callback
+                               
+        function nuevoContenido(){
+            document.getElementById('mostrar').innerHTML = 'Nuevo contenido';//aquí se modifica el div
+        }                                     
+    </script>
+    
+</body>
+</html>

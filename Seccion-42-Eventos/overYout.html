@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos mouse out y over</title>
+</head>
+<body>
+    <!--
+        Estos métodos no requieren de clicks, solo se posiciona el ratón sobre el elemento y se activa el evento
+    -->
+    <h1 id="titulo" onmouseover="sobre(this)" onmouseout="fuera(this)">Evento onmouse</h1>
+
+    <script>
+
+        function sobre (titulo){
+            titulo.style.color = 'red';
+            titulo.innerHTML = 'Evento onmouseover';
+        }
+
+        function fuera (titulo){
+            titulo.style.color = 'blue';
+            titulo.innerHTML = 'Evento onmouseout';
+        }
+        //Pensaba usar la propiedad value para cambiar el texto, pero como es una etiqueta y no un campo
+        //este no funciona así, recordé que las etiquetas se cambian con innerHTML
+    </script>
+    
+</body>
+</html>

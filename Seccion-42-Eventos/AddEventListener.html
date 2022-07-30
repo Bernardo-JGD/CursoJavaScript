@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddEventListener</title>
+</head>
+<body>
+    
+    <h1>AddEventListener</h1>
+    <div>
+        Nombre: <input type="text" id="nombre"/>
+        <br/><br/>
+        Apellido: <input type="text" id="apellido"/>
+    </div>
+
+    <script>
+        //addEventListener('nombreDelEventoSinON', nombreDeLaFuncionCallBack);
+        document.getElementById('nombre').addEventListener('focus', cambiar);
+        document.getElementById('nombre').addEventListener('blur', regresar);
+
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur', regresar);
+
+        function cambiar(evento){
+            let componente = evento.target;
+            //evento.target: esto nos devuelve el elemento input text, tal como si usaramos el operador this
+            //esto se lo podemos asignar a una variable y a partir de ella hacer las modificaciones
+            componente.style.background = 'yellow';
+        }
+        function regresar(evento){
+            evento.target.style.background = 'white';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="cabecero">DOM con JavaScript</h1>
+    <p id="parrafo">Saludos</p>
+    <h1 id="cabecero2">Segundo título</h1>
+    <p id="parrafo2">Párrafo para modificar</p>
+
+    <!--
+        Los script deben de ir preferentemente al final, o después de los elementos html
+        para poder manipularlos, de lo contrario marcaran null
+    -->
+    <script>
+        let cabecero1 = document.getElementById('cabecero').innerHTML;//innerHTML: accedemos al texto del elemento HTML
+        console.log("Valor Cabecero: " + cabecero1);    
+        let parrafo1 = document.getElementById('parrafo').innerHTML;//inner significa interno
+        console.log("Valor párrafo: " + parrafo1);
+
+        //Esto es lo que pasa si quitamos el inner al declara la variable
+        let cabecero2 = document.getElementById('cabecero');
+        let parrafo2 = document.getElementById('parrafo');
+        console.log("Titulo: " + cabecero2);
+        console.log("Párrafo: " + parrafo2);//nos retorna el tipo de objeto que es, no el valor que contiene
+
+        //podemos agregar el inner a la variable directamente cuando la vayamos a usar, para acceder al valor del elemento
+        console.log("Título: " + cabecero2.innerHTML);
+        console.log("Párrafo: " + parrafo2.innerHTML)
+
+        console.log("Saludos con javascript");
+        console.log("-----------------------------------------------");
+        //Podemos mostrar el mismo mensaje, pero en vez de usar comillas usamos el template string, o eso
+        console.log(`Título: ${cabecero2.innerHTML}`);
+        console.log(`Párrafo: ${parrafo2.innerHTML}`);
+
+        //También podemos moficar los elementos html desde javascript
+        let titulo2 = document.getElementById('cabecero2');
+        let parrafo3 = document.getElementById('parrafo2');
+        console.log("Antes de la modificación");
+        console.log(`Título 2: ${titulo2.innerHTML}`);
+        console.log(`Párrafo 2: ${parrafo3.innerHTML}`);
+        console.log(`Después de la modificación`);
+        titulo2.innerHTML = "Modificando el título 2";
+        parrafo3.innerHTML = "Modificando el párrafo 2";
+        //despues de la modificación
+        console.log(`Título 2: ${titulo2.innerHTML}`);
+        console.log(`Párrafo 2: ${parrafo3.innerHTML}`);
+        
+
+    </script>
+    
+</body>
+</html>
